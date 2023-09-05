@@ -6,7 +6,7 @@ Async GRPC client library for the Taiji Base Node.
 
 ```javascript
 const { Client } = require("@taiji/base-node-grpc-client");
-const client = Client.connect("127.0.0.1:18142");
+const client = Client.connect("127.0.0.1:28326");
 const { value } = await client.getVersion();
 console.log(value);
 ```

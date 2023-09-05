@@ -24,7 +24,7 @@ use minotaiji_node_grpc_client::{grpc, BaseNodeGrpcClient};
 
 #[tokio::test]
 async fn it_works() {
-    match BaseNodeGrpcClient::connect("http://127.0.0.1:18142").await {
+    match BaseNodeGrpcClient::connect("http://127.0.0.1:28326").await {
         Ok(mut client) => {
             let _tip_info = client.get_tip_info(grpc::Empty {}).await;
             #[cfg(debug_assertions)]

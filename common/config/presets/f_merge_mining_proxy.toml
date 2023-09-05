@@ -36,8 +36,8 @@ monerod_url = [# stagenet
 # If authentication is being used for curl. (default = false)
 #monerod_use_auth = false
 
-# The Minotaiji base node's GRPC address. (default = "/ip4/127.0.0.1/tcp/18142")
-#base_node_grpc_address = "/ip4/127.0.0.1/tcp/18142"
+# The Minotaiji base node's GRPC address. (default = "/ip4/127.0.0.1/tcp/28326")
+#base_node_grpc_address = "/ip4/127.0.0.1/tcp/28326"
 
 # The Minotaiji wallet's GRPC address. (default = "/ip4/127.0.0.1/tcp/18143")
 #console_wallet_grpc_address = "/ip4/127.0.0.1/tcp/18143"

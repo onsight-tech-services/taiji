@@ -7,8 +7,8 @@
 
 [miner]
 
-# GRPC address of base node (default = "/ip4/127.0.0.1/tcp/18142")
-#base_node_grpc_address = "/ip4/127.0.0.1/tcp/18142"
+# GRPC address of base node (default = "/ip4/127.0.0.1/tcp/28326")
+#base_node_grpc_address = "/ip4/127.0.0.1/tcp/28326"
 
 # GRPC address of console wallet (default = "/ip4/127.0.0.1/tcp/18143")
 #wallet_grpc_address = "/ip4/127.0.0.1/tcp/18143"

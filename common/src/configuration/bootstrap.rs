@@ -105,7 +105,7 @@ pub fn grpc_default_port(app_type: ApplicationType, network: Network) -> u16 {
             Network::MainNet => 18102u16,
             Network::StageNet => 18172u16,
             Network::NextNet => 18182u16,
-            Network::Esmeralda => 18142u16,
+            Network::Esmeralda => 28326u16,
             Network::Igor => 18152u16,
             Network::LocalNet => 18162u16,
         },

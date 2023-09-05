@@ -31,7 +31,7 @@ function connect(address) {
   return client;
 }
 
-function Client(address = "127.0.0.1:18142") {
+function Client(address = "127.0.0.1:28326") {
   this.inner = connect(address);
 
   const methods = [

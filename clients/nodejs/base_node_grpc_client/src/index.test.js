@@ -5,7 +5,7 @@
 
 const { Client } = require("./index");
 const host = process.env.HOST || "127.0.0.1";
-const port = process.env.PORT || "18142";
+const port = process.env.PORT || "28326";
 const address = `${host}:${port}`;
 const baseNode = Client.connect(address);
 

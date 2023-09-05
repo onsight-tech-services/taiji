@@ -333,9 +333,9 @@ services:
     stdin_open: true
     tty: true
     expose:
-      - 18142
+      - 28326
     ports:
-      - "18142:18142"
+      - "28326:28326"
 ```
 
 Then run `docker-compose up -d` to start your docker service.
@@ -345,14 +345,14 @@ Check the running state with `docker-compose ps`
 ```
         Name           Command    State            Ports
 ------------------------------------------------------------------
-tbn_taiji_base_node_1   start.sh   Up      0.0.0.0:18142->18142/tcp
+tbn_taiji_base_node_1   start.sh   Up      0.0.0.0:28326->28326/tcp
 ```
 
 To connect to the console, use `docker ps` to get the container ID which to attach to the taiji_base_node in docker
 
 ```
 CONTAINER ID        IMAGE                                    COMMAND             CREATED             STATUS              PORTS                      NAMES
-73427509a4bb        quay.io/taijilabs/taiji_base_node:v0.5.4   "start.sh"          45 minutes ago      Up 26 minutes       0.0.0.0:18142->18142/tcp   tbn_taiji_base_node_1
+73427509a4bb        quay.io/taijilabs/taiji_base_node:v0.5.4   "start.sh"          45 minutes ago      Up 26 minutes       0.0.0.0:28326->28326/tcp   tbn_taiji_base_node_1
 ```
 
 With the container ID `73427509a4bb`, connect to the minotaiji_node console as follows `docker attach 73427509a4bb`
@@ -468,7 +468,7 @@ grpc_address = "127.0.0.1:18143"
 transport = "tor"
 allow_test_addresses = false
 grpc_enabled = true
-grpc_base_node_address = "127.0.0.1:18142"
+grpc_base_node_address = "127.0.0.1:28326"
 ```
 
 For MiningCore:
@@ -487,7 +487,7 @@ For the Minotaiji Miner there are some additional settings under section **`mine
 
 # GRPC address of base node
 # Default: value from `base_node.grpc_base_node_address`
-#base_node_grpc_address = "127.0.0.1:18142"
+#base_node_grpc_address = "127.0.0.1:28326"
 
 # GRPC address of console wallet
 # Default: value from `wallet.grpc_address`
@@ -639,7 +639,7 @@ they are not enabled already:
   [base_node.esmeralda]
   transpo*_r_*t = "tor"
   allow_test_addresses = false
-  base_node_grpc_address = "127.0.0.1:18142"
+  base_node_grpc_address = "127.0.0.1:28326"
   ```
 
 And then depending on if you are using solo mining or self-select mining you will use one of the following:
@@ -686,7 +686,7 @@ And then depending on if you are using solo mining or self-select mining you wil
   monerod_password = ""
   ```
 
-**Note:** The ports `18081`, `18142` and `18143` shown in the example above should not be in use by other processes. If
+**Note:** The ports `18081`, `28326` and `18143` shown in the example above should not be in use by other processes. If
 they are, choose different ports. You will need to update the ports in the steps below as well.
 
 The `monerod_url` set must contain valid addresses (`host:port`) for `monerod` that is running Monero mainnet (e.g.
