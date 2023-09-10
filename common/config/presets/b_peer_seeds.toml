@@ -59,13 +59,13 @@ peer_seeds = [
 
 [esmeralda.p2p.seeds]
 # DNS seeds hosts - DNS TXT records are queried from these hosts and the resulting peers added to the comms peer list.
-dns_seeds = ["seeds.esmeralda.taiji.com"]
+dns_seeds = []
 # Custom specified peer seed nodes
 peer_seeds = [
-    # 111111df4003f0c2c827eddad8
-    "18386842a298724e50ae4690a2c6dc57337fb5efcc42f75813226c0436948714::/onion3/p7k4tvpefibjew6cnbiqnb4q5zjojdm3kzw2fpu7lt2zm6an547tnkad:18141",
-    # fffffffb1801b9dd652dc74b19
-    "3e39734233e413c4935396f335b65dfc49c1f78e48940be6770a8b82966d1551::/onion3/6w2heg6oahozcio5zqsa5w5txeah2zkrf4nlq5igzdnkygvaqqt3mzid:18141",
+    # taiji-seed-0 eaca56b7a1386f486a5d3b64ba
+    "b282b0fe36a2ce18c98ae27c358bab8c612718807d5db1b744c6e2cc80775469::/onion3/fnjultkdyeubk74w2wtikjeflw4ugl2nlff4ssg2yfjpvnjdu4sl2vad:18141",
+    # taiji-seed-1 8df3a306082d38e7b01ab35cde
+    "2ed8fe6a178e2742ae57dbca098c85194636f13247194a5d4ecc325ae9b1850c::/onion3/u4hjzajdoljiyn6mpzu7vv6iv37lvmryoq6zubtm4yvyjbm3sqlhd2yd:18141",
 ]
 
 
