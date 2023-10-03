@@ -657,6 +657,7 @@ pub(crate) fn confirm_seed_words(wallet: &mut WalletSqlite) -> Result<(), ExitEr
 }
 
 /// Clear the terminal and print the Taiji splash
+// TODO replace Tari splash branding
 pub fn taiji_splash_screen(heading: &str) {
     // clear the terminal
     print!("{esc}[2J{esc}[1;1H", esc = 27 as char);

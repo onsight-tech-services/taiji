@@ -304,20 +304,12 @@ pub fn get_esmeralda_genesis_block() -> ChainBlock {
 
 fn get_esmeralda_genesis_block_raw() -> Block {
     // Set genesis timestamp
-    let genesis_timestamp = DateTime::parse_from_rfc2822("11 Aug 2023 15:40:00 +0200").expect("parse may not fail");
+    let genesis_timestamp = DateTime::parse_from_rfc2822("3 Oct 2023 00:00:00 +0000").expect("parse may not fail");
     // Let us add a "not before" proof to the genesis block
     let not_before_proof =
-        b"as I sip my drink, thoughts of esmeralda consume my mind, like a refreshing nourishing draught \
+        b"Live: The Trial of FTX Founder Sam Bankman-Fried \
         \
-        The New York Times , 2000/01/01 \
-        \
-        Lorem Ipsum \
-        \
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore \
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo \
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla \
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id \
-        est laborum.";
+        Wired , 2023/10/03";
     get_raw_block(&genesis_timestamp, &not_before_proof.to_vec())
 }
 
@@ -336,11 +328,11 @@ fn get_raw_block(genesis_timestamp: &DateTime<FixedOffset>, not_before_proof: &[
             height: 0,
             prev_hash: FixedHash::zero(),
             timestamp: timestamp.into(),
-            output_mr: FixedHash::from_hex("daab077d6dadb830bf506cc55c82abc6c3563bec6ff1d5699806f8b13059b4c3").unwrap(),
+            output_mr: FixedHash::from_hex("1cac9276ab7f3e8865b8714c948911002a3d7c00fbe7c9a78c0bdc3569c0bb5d").unwrap(),
             output_mmr_size: 0,
-            kernel_mr: FixedHash::from_hex("c14803066909d6d22abf0d2d2782e8936afc3f713f2af3a4ef5c42e8400c1303").unwrap(),
+            kernel_mr: FixedHash::from_hex("5d42e0394f261683a7139318bdd6db01d0ec8d553579bc7e1c2db65296df5190").unwrap(),
             kernel_mmr_size: 0,
-            validator_node_mr: FixedHash::from_hex("277da65c40b2cf99db86baedb903a3f0a38540f3a94d40c826eecac7e27d5dfc")
+            validator_node_mr: FixedHash::from_hex("3162a2a8d71f210c3f58b25c81d89d703ff1a4dc5d48ca9cdc02d56399b9c8be")
                 .unwrap(),
             input_mr: FixedHash::zero(),
             total_kernel_offset: PrivateKey::from_hex(

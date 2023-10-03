@@ -485,7 +485,7 @@ async fn inputs_not_malleable() {
     let mut tx = test_helpers::create_transaction_with(1, 15.into(), inputs, outputs, &key_manager).await;
 
     stack
-        .push(StackItem::Hash(*b"Pls put this on tha taiji network"))
+        .push(StackItem::Hash(*b"Jones' string of 32 characters!!"))
         .unwrap();
 
     let mut inputs = tx.body().inputs().clone();
