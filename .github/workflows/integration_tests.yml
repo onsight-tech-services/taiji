@@ -86,10 +86,10 @@ jobs:
             ~/.cargo/registry/CACHEDIR.TAG
             ~/.cargo/git
             target
-          key: tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
+          key: taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
-            tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
-            tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly
+            taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
+            taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly
 
       - name: cargo test compile
         run: cargo test --no-run --locked --all-features --release ${{ env.TARGET_BINS }}
@@ -103,7 +103,7 @@ jobs:
             -v \
             --all-features \
             --release \
-            --package tari_integration_tests \
+            --package taiji_integration_tests \
             -- -t "${{ env.CI_PROFILE }} and (not @wallet-ffi) and (not @chat-ffi) and (not @broken)" \
             -c 5 \
             --retry 2
@@ -167,10 +167,10 @@ jobs:
             ~/.cargo/registry/CACHEDIR.TAG
             ~/.cargo/git
             target
-          key: tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
+          key: taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
-            tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
-            tari-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly
+            taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly-${{ hashFiles('**/Cargo.lock') }}
+            taiji-${{ runner.os }}-${{ runner.cpu-model }}-${{ env.toolchain }}-nightly
 
       - name: cargo test compile
         if: ${{ env.CI_FFI == 'true' }}
@@ -185,7 +185,7 @@ jobs:
             -v \
             --all-features \
             --release \
-            --package tari_integration_tests \
+            --package taiji_integration_tests \
             -- -t "(@wallet-ffi or @chat-ffi) and ${{ env.CI_PROFILE }} and (not @broken)" \
             -c 1 \
             --retry 2

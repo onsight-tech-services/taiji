@@ -31,16 +31,16 @@ name: Build docker images
           - linux/arm64
           - linux/arm64, linux/amd64
       build_items:
-        default: minotari_all
+        default: minotaiji_all
         description: 'image(s) to build'
         type: choice
         options:
           - all
-          - minotari_all
-          - minotari_node
-          - minotari_console_wallet
-          - minotari_merge_mining_proxy
-          - minotari_sha3_miner
+          - minotaiji_all
+          - minotaiji_node
+          - minotaiji_console_wallet
+          - minotaiji_merge_mining_proxy
+          - minotaiji_sha3_miner
           - 3rdparty_all
           - tor
           - monerod
@@ -95,7 +95,7 @@ jobs:
             echo "Daily Build - limited"
             echo "platforms=linux/amd64" >> $GITHUB_OUTPUT
             echo "tag_alias=latest-daily" >> $GITHUB_OUTPUT
-            echo "build_items=minotari_all" >> $GITHUB_OUTPUT
+            echo "build_items=minotaiji_all" >> $GITHUB_OUTPUT
           fi
 
   builds_run:

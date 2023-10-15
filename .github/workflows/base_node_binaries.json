@@ -6,7 +6,7 @@
     "target": "x86_64-unknown-linux-gnu",
     "cross": false,
     "target_cpu": "x86-64",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
     "features": "safe"
   },
   {
@@ -17,8 +17,8 @@
     "cross": true,
     "target_cpu": "generic",
     "features": "safe",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
-    "flags": "--workspace --exclude minotari_mining_helper_ffi --exclude tari_integration_tests"
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
+    "flags": "--workspace --exclude minotaiji_mining_helper_ffi --exclude taiji_integration_tests"
   },
   {
     "name": "macos-x86_64",
@@ -27,7 +27,7 @@
     "target": "x86_64-apple-darwin",
     "cross": false,
     "target_cpu": "x86-64",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
     "features": "safe"
   },
   {
@@ -37,7 +37,7 @@
     "target": "aarch64-apple-darwin",
     "cross": false,
     "target_cpu": "generic",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
     "features": "safe"
   },
   {
@@ -48,8 +48,8 @@
     "cross": false,
     "target_cpu": "x86-64",
     "features": "safe",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
-    "flags": "--workspace --exclude tari_libtor"
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
+    "flags": "--workspace --exclude taiji_libtor"
   },
   {
     "name": "windows-arm64",
@@ -59,7 +59,7 @@
     "cross": false,
     "target_cpu": "generic",
     "features": "safe",
-    "target_bins": "--bin minotari_node --bin minotari_console_wallet --bin minotari_merge_mining_proxy --bin minotari_miner",
+    "target_bins": "--bin minotaiji_node --bin minotaiji_console_wallet --bin minotaiji_merge_mining_proxy --bin minotaiji_miner",
     "build_enabled": false
   }
 ]

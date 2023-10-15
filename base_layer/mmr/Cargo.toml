@@ -2,7 +2,7 @@
 name = "taiji_mmr"
 authors = ["The Taiji Development Community"]
 description = "A Merkle Mountain Range implementation"
-repository = "https://github.com/tari-project/tari"
+repository = "https://github.com/onsight-tech-services/taiji"
 license = "BSD-3-Clause"
 version = "0.52.0-pre.0"
 edition = "2018"

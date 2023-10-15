@@ -1149,7 +1149,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* allow network to be set by TARI_NETWORK env var ([#4073](https://github.com/taiji-project/taiji/issues/4073)) ([c27be5c](https://github.com/taiji-project/taiji/commit/c27be5cdf132c9c4f3a2806c070be1765b41fa61))
+* allow network to be set by taiji_NETWORK env var ([#4073](https://github.com/taiji-project/taiji/issues/4073)) ([c27be5c](https://github.com/taiji-project/taiji/commit/c27be5cdf132c9c4f3a2806c070be1765b41fa61))
 * **collectibles:** add list assets command ([#3908](https://github.com/taiji-project/taiji/issues/3908)) ([5b726a6](https://github.com/taiji-project/taiji/commit/5b726a6bc47bc2024ae743a772b67c17dee4f988))
 * **merge mining proxy:** check achieved Monero difficulty before submitting to Taiji basenode ([#4019](https://github.com/taiji-project/taiji/issues/4019)) ([b09fa76](https://github.com/taiji-project/taiji/commit/b09fa768e2538c2dfdaaee73cb31353b78c03ba3))
 * **p2p:** adds tor.forward_address setting ([#4070](https://github.com/taiji-project/taiji/issues/4070)) ([8c78717](https://github.com/taiji-project/taiji/commit/8c7871761e8fb604092f462a4e8e76fa2a103b7a))

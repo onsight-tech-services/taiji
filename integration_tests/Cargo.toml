@@ -1,7 +1,7 @@
 [package]
 name = "taiji_integration_tests"
 authors = ["The Taiji Development Community"]
-repository = "https://github.com/tari-project/tari"
+repository = "https://github.com/onsight-tech-services/taiji"
 license = "BSD-3-Clause"
 version = "0.35.1"
 edition = "2018"

@@ -2,7 +2,7 @@
 name = "minotaiji_node"
 authors = ["The Taiji Development Community"]
 description = "The taiji full base node implementation"
-repository = "https://github.com/tari-project/tari"
+repository = "https://github.com/onsight-tech-services/taiji"
 license = "BSD-3-Clause"
 version = "0.52.0-pre.0"
 edition = "2018"

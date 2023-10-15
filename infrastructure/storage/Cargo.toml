@@ -2,7 +2,7 @@
 name = "taiji_storage"
 authors = ["The Taiji Development Community"]
 description = "Key-Value store API for the Taiji project"
-repository = "https://github.com/tari-project/tari"
+repository = "https://github.com/onsight-tech-services/taiji"
 homepage = "https://taiji.com"
 readme = "README.md"
 license = "BSD-3-Clause"

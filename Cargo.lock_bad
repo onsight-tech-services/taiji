@@ -2770,7 +2770,7 @@ dependencies = [
 [[package]]
 name = "liblmdb-sys"
 version = "0.2.3"
-source = "git+https://github.com/tari-project/lmdb-rs?tag=0.7.6-tari.1#8d88933179c4ab7ceafb407a9615ecdd5c569a5f"
+source = "git+https://github.com/tari-project/lmdb-rs?tag=0.7.6-taiji.1#8d88933179c4ab7ceafb407a9615ecdd5c569a5f"
 dependencies = [
  "cc",
  "libc",
@@ -5424,7 +5424,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "taiji-curve25519-dalek"
+name = "tari-curve25519-dalek"
 version = "4.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d9b8e2644aae57a832e475ebc31199ab1114ebd7fe4d2621e67e89bdd9c8ac38"
@@ -5459,7 +5459,7 @@ dependencies = [
  "rand_core 0.6.4",
  "serde",
  "sha3 0.10.8",
- "taiji-curve25519-dalek",
+ "tari-curve25519-dalek",
  "thiserror",
  "zeroize",
 ]
@@ -5752,7 +5752,7 @@ dependencies = [
  "sha3 0.10.8",
  "strum",
  "strum_macros",
- "taiji-curve25519-dalek",
+ "tari-curve25519-dalek",
  "taiji_common",
  "taiji_common_sqlite",
  "taiji_common_types",
@@ -5794,7 +5794,7 @@ dependencies = [
  "serde",
  "sha3 0.10.8",
  "snafu",
- "taiji-curve25519-dalek",
+ "tari-curve25519-dalek",
  "taiji_bulletproofs_plus",
  "taiji_utilities",
  "zeroize",

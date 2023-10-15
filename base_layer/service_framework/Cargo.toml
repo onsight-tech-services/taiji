@@ -3,7 +3,7 @@ name = "taiji_service_framework"
 version = "0.52.0-pre.0"
 authors = ["The Taiji Development Community"]
 description = "The Taiji communication stack service framework"
-repository = "https://github.com/tari-project/tari"
+repository = "https://github.com/onsight-tech-services/taiji"
 edition = "2018"
 license = "BSD-3-Clause"
 
