@@ -63,11 +63,11 @@ impl Display for Target {
 
 // Identify the target network by
 // 1. Checking whether --config taiji-network=xxx was passed in as a config flag to cargo (or from Cargo.toml)
-// 2. Checking the environment variable TARI_NETWORK is set
+// 2. Checking the environment variable TAIJI_NETWORK is set
 // 3. default to mainnet
 pub fn identify_target() -> Target {
     check_envar("CARGO_CFG_TARI_NETWORK")
-        .or_else(|| check_envar("TARI_NETWORK"))
+        .or_else(|| check_envar("TAIJI_NETWORK"))
         .unwrap_or(Target::TestNet)
 }
 
@@ -116,7 +116,7 @@ pub fn activate_feature(feature: &Feature) {
 
 pub fn build_features() {
     // Make sure to rebuild when the network changes
-    println!("cargo:rerun-if-env-changed=TARI_NETWORK");
+    println!("cargo:rerun-if-env-changed=TAIJI_NETWORK");
 
     let target = identify_target();
     println!("cargo:rustc-cfg=taiji_network_{}", target.as_key_str());

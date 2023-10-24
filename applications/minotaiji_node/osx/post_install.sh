@@ -185,9 +185,9 @@ torsocks wget -qO - https://api.ipify.org; echo
 DATA_DIR=${1:-"$HOME/.taiji"}
 NETWORK=stibbons
 
-banner Installing and setting up your Taiji Base Node
+banner Installing and setting up your Tari Base Node
 if [ ! -d "$DATA_DIR/$NETWORK" ]; then
-  echo "Creating Taiji data folder in $DATA_DIR"
+  echo "Creating Tari data folder in $DATA_DIR"
   mkdir -p $DATA_DIR/$NETWORK
 fi
 
@@ -202,7 +202,7 @@ if [ ! -f "$DATA_DIR/config.toml" ]; then
   echo "Configuration complete."
 fi
 
-banner Running Taiji Base Node
+banner Running Tari Base Node
 # Run Base Node
 if [ -e ~/Desktop/taiji_base_node ]; then
   echo "Desktop Link to Minotaiji Base Node exits"

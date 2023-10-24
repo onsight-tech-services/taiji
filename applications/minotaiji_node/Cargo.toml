@@ -1,10 +1,10 @@
 [package]
 name = "minotaiji_node"
-authors = ["The Taiji Development Community"]
+authors = ["The Tari Development Community"]
 description = "The taiji full base node implementation"
-repository = "https://github.com/onsight-tech-services/taiji"
+repository = "https://github.com/tari-project/taiji"
 license = "BSD-3-Clause"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 edition = "2018"
 
 [dependencies]

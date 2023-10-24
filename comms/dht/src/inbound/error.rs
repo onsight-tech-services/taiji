@@ -21,17 +21,13 @@
 // USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 use taiji_comms::{
+    connectivity::ConnectivityError,
     message::MessageError,
-    peer_manager::{NodeId, PeerManagerError},
+    peer_manager::PeerManagerError,
 };
 use thiserror::Error;
 
-use crate::{
-    discovery::DhtDiscoveryError,
-    error::DhtEncryptError,
-    outbound::DhtOutboundError,
-    peer_validator::PeerValidatorError,
-};
+use crate::{discovery::DhtDiscoveryError, outbound::DhtOutboundError, peer_validator::DhtPeerValidatorError};
 
 #[derive(Debug, Error)]
 pub enum DhtInboundError {
@@ -41,24 +37,16 @@ pub enum DhtInboundError {
     PeerManagerError(#[from] PeerManagerError),
     #[error("DhtOutboundError: {0}")]
     DhtOutboundError(#[from] DhtOutboundError),
-    #[error("DhtEncryptError: {0}")]
-    DhtEncryptError(#[from] DhtEncryptError),
     #[error("Message body invalid")]
     InvalidMessageBody,
-    #[error("All given addresses were invalid")]
-    InvalidAddresses,
-    #[error("One or more peer addresses were invalid for '{peer}'")]
-    InvalidPeerAddresses { peer: NodeId },
     #[error("DhtDiscoveryError: {0}")]
     DhtDiscoveryError(#[from] DhtDiscoveryError),
     #[error("OriginRequired: {0}")]
     OriginRequired(String),
-    #[error("Invalid peer identity signature: {0}")]
-    InvalidPeerIdentitySignature(String),
-    #[error("No peer identity signature")]
-    NoPeerIdentitySignature,
-    #[error("Invalid peer: {0}")]
-    PeerValidatorError(#[from] PeerValidatorError),
+    #[error("Peer validation failed: {0}")]
+    PeerValidatorError(#[from] DhtPeerValidatorError),
     #[error("Invalid discovery message {0}")]
     InvalidDiscoveryMessage(#[from] anyhow::Error),
+    #[error("ConnectivityError: {0}")]
+    ConnectivityError(#[from] ConnectivityError),
 }

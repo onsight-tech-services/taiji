@@ -3,7 +3,7 @@ name = "minotaiji_wallet"
 authors = ["The Taiji Development Community"]
 description = "Taiji cryptocurrency wallet library"
 license = "BSD-3-Clause"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 edition = "2018"
 
 [dependencies]
@@ -68,7 +68,7 @@ env_logger = "0.7.1"
 prost = "0.9.0"
 
 [features]
-default=["bundled_sqlite"]
+default = ["bundled_sqlite"]
 c_integration = []
 bundled_sqlite = ["libsqlite3-sys"]
 

@@ -58,7 +58,7 @@ NETWORK=stibbons
 
 banner Installing and setting up your Minotaiji Base Node
 if [ ! -d "$DATA_DIR/$NETWORK" ]; then
-  echo "Creating Taiji data folder in $DATA_DIR"
+  echo "Creating Tari data folder in $DATA_DIR"
   mkdir -p $DATA_DIR/$NETWORK
 fi
 
@@ -84,6 +84,6 @@ fi
 # Configure Base Node
 ./taiji_base_node --init
 
-banner Running Taiji Base Node
+banner Running Tari Base Node
 # Run Base Node
 ./taiji_base_node

@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2019, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -22,6 +22,7 @@
 
 use diesel::result::Error as DieselError;
 use taiji_common_sqlite::error::SqliteStorageError;
+use taiji_common_types::taiji_address::TaijiAddressError;
 use taiji_comms::connectivity::ConnectivityError;
 use taiji_comms_dht::outbound::DhtOutboundError;
 use taiji_p2p::services::liveness::error::LivenessError;
@@ -47,6 +48,12 @@ pub enum ContactsServiceError {
     ConnectivityError(#[from] ConnectivityError),
     #[error("Outbound comms error: `{0}`")]
     OutboundCommsError(#[from] DhtOutboundError),
+    #[error("Error parsing address: `{source}`")]
+    MessageParsingError { source: TaijiAddressError },
+    #[error("Error decoding message: `{0}`")]
+    MalformedMessageError(#[from] prost::DecodeError),
+    #[error("Message source does not match authenticated origin")]
+    MessageSourceDoesNotMatchOrigin,
 }
 
 #[derive(Debug, Error)]

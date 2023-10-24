@@ -1,4 +1,4 @@
-// Copyright 2023. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -20,9 +20,11 @@
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 // USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+use std::convert::TryFrom;
+
 use num_derive::FromPrimitive;
 use num_traits::FromPrimitive;
-use taiji_common_types::taiji_address::TaijiAddress;
+use taiji_common_types::taiji_address::{TaijiAddress, TaijiAddressError};
 use taiji_comms_dht::domain_message::OutboundDomainMessage;
 use taiji_p2p::taiji_message::TaijiMessageType;
 use tari_utilities::ByteArray;
@@ -61,16 +63,18 @@ impl Default for Direction {
     }
 }
 
-impl From<proto::Message> for Message {
-    fn from(message: proto::Message) -> Self {
-        Self {
+impl TryFrom<proto::Message> for Message {
+    type Error = TaijiAddressError;
+
+    fn try_from(message: proto::Message) -> Result<Self, Self::Error> {
+        Ok(Self {
             body: message.body,
-            address: TaijiAddress::from_bytes(&message.address).expect("Couldn't parse address"),
+            address: TaijiAddress::from_bytes(&message.address)?,
             // A Message from a proto::Message will always be an inbound message
             direction: Direction::Inbound,
             stored_at: message.stored_at,
             message_id: message.message_id,
-        }
+        })
     }
 }
 

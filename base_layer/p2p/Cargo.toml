@@ -1,10 +1,10 @@
 [package]
 name = "taiji_p2p"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 authors = ["The Taiji Development community"]
 description = "Taiji base layer-specific peer-to-peer communication features"
 repository = "https://github.com/onsight-tech-services/taiji"
-homepage = "https://taiji.com"
+homepage = "https://onsight.services"
 readme = "README.md"
 license = "BSD-3-Clause"
 edition = "2018"
@@ -51,5 +51,4 @@ taiji_common = {  path = "../../common", features = ["build"] }
 
 [features]
 test-mocks = []
-auto-update = ["reqwest/default", "pgp" ,"semver"]
-
+auto-update = ["reqwest/default", "pgp", "semver"]

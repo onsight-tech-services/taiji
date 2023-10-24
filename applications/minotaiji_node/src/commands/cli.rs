@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -164,7 +164,7 @@ pub fn print_banner(commands: Vec<String>, chunk_size: usize) {
     println!(
         "{}",
         box_data(
-            format!("Copyright 2019-{}. {}", Utc::now().year(), consts::APP_AUTHOR),
+            format!("Copyright 2023-{}. {}", Utc::now().year(), consts::APP_AUTHOR),
             target_line_length
         )
     );

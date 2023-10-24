@@ -24,6 +24,7 @@ use std::{convert::TryFrom, marker::PhantomData};
 
 use digest::Digest;
 use taiji_common::DomainDigest;
+use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
 use crate::{common::hash_together, Hash};
@@ -46,7 +47,7 @@ pub enum BalancedBinaryMerkleTreeError {
 // Because this implementation relies on the caller to hash leaf nodes, it is possible to instantiate a tree that is
 /// susceptible to second-preimage attacks. The caller _must_ ensure that the hashers used to pre-hash leaf nodes and
 /// instantiate the tree cannot produce collisions.
-#[derive(Debug)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct BalancedBinaryMerkleTree<D> {
     hashes: Vec<Hash>,
     _phantom: PhantomData<D>,

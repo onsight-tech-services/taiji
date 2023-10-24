@@ -1,4 +1,4 @@
-// Copyright 2023. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 // SPDX-License-Identifier: BSD-3-Clause
 
 use std::{env, path::PathBuf};
@@ -18,16 +18,17 @@ fn main() {
 
     let config = Config {
         language: Language::C,
-        header: Some("// Copyright 2023. The Taiji Project\n// SPDX-License-Identifier: BSD-3-Clause".to_string()),
+        header: Some("// Copyright 2023, OnSight Tech Services LLC\n// SPDX-License-Identifier: BSD-3-Clause".to_string()),
         parse: ParseConfig {
             parse_deps: true,
             include: Some(vec![
-                "taiji_core".to_string(),
+                "minotaiji_wallet".to_string(),
+                "taiji_chat_client".to_string(),
                 "taiji_common_types".to_string(),
+                "taiji_contacts".to_string(),
+                "taiji_core".to_string(),
                 "tari_crypto".to_string(),
                 "taiji_p2p".to_string(),
-                "minotaiji_wallet".to_string(),
-                "taiji_contacts".to_string(),
             ]),
             ..Default::default()
         },

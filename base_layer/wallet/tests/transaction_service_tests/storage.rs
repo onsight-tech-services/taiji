@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -68,7 +68,7 @@ use taiji_core::{
 };
 use tari_crypto::keys::{PublicKey as PublicKeyTrait, SecretKey as SecretKeyTrait};
 use taiji_key_manager::key_manager_service::KeyManagerInterface;
-use taiji_script::{inputs, script, TaijiScript};
+use taiji_script::{inputs, script};
 use taiji_test_utils::random;
 use tempfile::tempdir;
 
@@ -76,7 +76,7 @@ pub async fn test_db_backend<T: TransactionBackend + 'static>(backend: T) {
     let mut db = TransactionDatabase::new(backend);
     let key_manager = create_test_core_key_manager_with_memory_db();
     let input = create_wallet_output_with_data(
-        TaijiScript::default(),
+        script!(Nop),
         OutputFeatures::default(),
         &TestParams::new(&key_manager).await,
         MicroMinotaiji::from(100_000),

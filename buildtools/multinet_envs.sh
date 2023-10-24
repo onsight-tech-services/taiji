@@ -6,17 +6,17 @@ echo $tagnet
 case "$tagnet" in
 v*-pre.*)
   echo "esme"
-  export TARI_NETWORK=esme
+  export TAIJI_NETWORK=esme
   export TARI_NETWORK_DIR=testnet
   ;;
 v*-rc.*)
   echo "nextnet" 
-  export TARI_NETWORK=nextnet
+  export TAIJI_NETWORK=nextnet
   export TARI_NETWORK_DIR=nextnet
   ;;
 *)
   echo "mainnet"
-  export TARI_NETWORK=mainnet
+  export TAIJI_NETWORK=mainnet
   export TARI_NETWORK_DIR=mainnet
   ;;
 esac

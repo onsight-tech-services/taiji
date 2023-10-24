@@ -125,7 +125,7 @@ depending on the choices you make when prompted:
 
 - To delete log files, delete the `.\log` folder.
 - To re-sync the blockchain, delete the `.\stibbons` folder.
-- To destroy your wallet and loose all your hard-earned tXTR Taiji coins, delete
+- To destroy your wallet and loose all your hard-earned tXTR Tari coins, delete
   the `.\wallet` folder.
 
 ## Manual Installation
@@ -137,7 +137,7 @@ depending on the choices you make when prompted:
   - Download 64bit Precompiled Binaries for Windows for
     [SQL Lite](https://www.sqlite.org/index.html).
   - Extract to local path, e.g. `%USERPROFILE%\.sqlite`.
-  - Add the path to the Taiji environment variable, e.g. type
+  - Add the path to the Tari environment variable, e.g. type
 
     ```
     setx TARI_SQLITE_DIR %USERPROFILE%\.sqlite
@@ -156,7 +156,7 @@ depending on the choices you make when prompted:
   - Download
     [Tor Windows Expert Bundle](https://www.torproject.org/download/tor/).
   - Extract to local path, e.g. `%USERPROFILE%\.tor_services`.
-  - Add the path to the Taiji environment variable, e.g. type
+  - Add the path to the Tari environment variable, e.g. type
 
     ```
     setx TARI_TOR_SERVICES_DIR %USERPROFILE%\.tor_services
@@ -179,7 +179,7 @@ depending on the choices you make when prompted:
 
   - Download 64bit Precompiled Binaries for Windows for XMreig.
   - Extract all files to local path, e.g. `%USERPROFILE%\.xmrig`.
-  - Add the path to the Taiji environment variable, e.g. type
+  - Add the path to the Tari environment variable, e.g. type
 
     ```
     setx TARI_XMRIG_DIR %USERPROFILE%\.xmrig
@@ -193,13 +193,13 @@ depending on the choices you make when prompted:
 - Folder Structure
 
   - All references to folders from here on are relative to
-    `applications\minotaiji_node\windows`, within the Taiji project source
+    `applications\minotaiji_node\windows`, within the Tari project source
     code folder structure.
 
 - Minotaiji Base Node Executable
 
   - Build `minotaiji_node.exe` according to
-    [Building from source (Windows 10)](https://github.com/taiji-project/taiji#build).
+    [Building from source (Windows 10)](https://github.com/tari-project/taiji#build).
   - Copy `minotaiji_node.exe` to `.`, `.\runtime` or other local path.
   - If not extracted to `.` or `.\runtime`, ensure the folder containing
     `minotaiji_node.exe` is in the path.
@@ -207,18 +207,18 @@ depending on the choices you make when prompted:
 - Minotaiji Base Node Runtime Configuration File
   - Copy `..\..\common\config\presets\config.toml` to `.\config`
 
-### Build the Taiji Console Wallet
+### Build the Tari Console Wallet
 
 - Folder Structure
 
   - All references to folders from here on are relative to
-    `applications\minotaiji_console_wallet\windows`, within the Taiji project
+    `applications\minotaiji_console_wallet\windows`, within the Tari project
     source code folder structure.
 
 - Minotaiji Wallet Executable
 
   - Build `minotaiji_console_wallet.exe` according to
-    [Building from source (Windows 10)](https://github.com/taiji-project/taiji#build).
+    [Building from source (Windows 10)](https://github.com/tari-project/taiji#build).
   - Copy `minotaiji_console_wallet.exe` to `.`, `.\runtime` or other local path.
   - If not extracted to `.` or `.\runtime`, ensure the folder containing
     `minotaiji_console_wallet.exe` is in the path.
@@ -231,13 +231,13 @@ depending on the choices you make when prompted:
 - Folder Structure
 
   - All references to folders from here on are relative to
-    `applications\minotaiji_merge_mining_proxy\windows`, within the Taiji project
+    `applications\minotaiji_merge_mining_proxy\windows`, within the Tari project
     source code folder structure.
 
 - Minotaiji Merge Mining Proxy Executable
 
   - Build `taiji_merge_mining_proxy.exe` according to
-    [Building from source (Windows 10)](https://github.com/taiji-project/taiji#build).
+    [Building from source (Windows 10)](https://github.com/tari-project/taiji#build).
   - Copy `taiji_merge_mining_proxy.exe` to `.`, `.\runtime` or other local path.
   - If not extracted to `.` or `.\runtime`, ensure the folder containing
     `taiji_merge_mining_proxy.exe` is in the path.
@@ -250,13 +250,13 @@ depending on the choices you make when prompted:
 - Folder Structure
 
   - All references to folders from here on are relative to
-    `applications\taiji_miner\windows`, within the Taiji project source
+    `applications\taiji_miner\windows`, within the Tari project source
     code folder structure.
 
 - Minotaiji Wallet Executable
 
   - Build `minotaiji_miner.exe` according to
-    [Building from source (Windows 10)](https://github.com/taiji-project/taiji#build).
+    [Building from source (Windows 10)](https://github.com/tari-project/taiji#build).
   - Copy `minotaiji_miner.exe` to `.`, `.\runtime` or other local path.
   - If not extracted to `.` or `.\runtime`, ensure the folder containing
     `minotaiji_miner.exe` is in the path.

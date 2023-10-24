@@ -24,6 +24,7 @@
 //! using the Ristretto curve from dalek via [tari_crypto](https://github.com/taiji-project/taiji-crypto).
 
 mod config;
+
 pub use config::NoiseConfig;
 
 mod crypto_resolver;

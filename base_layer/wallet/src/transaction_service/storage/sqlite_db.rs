@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -2269,7 +2269,7 @@ mod test {
         SenderTransactionProtocol,
     };
     use tari_crypto::keys::{PublicKey as PublicKeyTrait, SecretKey as SecretKeyTrait};
-    use taiji_script::{inputs, script, TaijiScript};
+    use taiji_script::{inputs, script};
     use taiji_test_utils::random::string;
     use tempfile::tempdir;
 
@@ -2330,7 +2330,7 @@ mod test {
         let mut builder = SenderTransactionProtocol::builder(constants, key_manager.clone());
         let test_params = TestParams::new(&key_manager).await;
         let input = create_wallet_output_with_data(
-            TaijiScript::default(),
+            script!(Nop),
             OutputFeatures::default(),
             &test_params,
             MicroMinotaiji::from(100_000),
@@ -2434,7 +2434,7 @@ mod test {
         );
 
         let output = create_wallet_output_with_data(
-            TaijiScript::default(),
+            script!(Nop),
             OutputFeatures::default(),
             &test_params,
             MicroMinotaiji::from(100_000),

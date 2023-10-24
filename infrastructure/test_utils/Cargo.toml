@@ -1,7 +1,7 @@
 [package]
 name = "taiji_test_utils"
 description = "Utility functions used in Taiji test functions"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 authors = ["The Taiji Development Community"]
 edition = "2018"
 license = "BSD-3-Clause"

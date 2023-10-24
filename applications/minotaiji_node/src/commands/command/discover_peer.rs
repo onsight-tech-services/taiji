@@ -1,4 +1,4 @@
-//  Copyright 2022, The Taiji Project
+//  Copyright 2023, OnSight Tech Services LLC
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -32,7 +32,7 @@ use tokio::task;
 
 use super::{CommandContext, HandleCommand};
 
-/// Attempt to discover a peer on the Taiji network
+/// Attempt to discover a peer on the Tari network
 #[derive(Debug, Parser)]
 pub struct Args {
     /// hex public key or emoji id

@@ -3,7 +3,7 @@
 # OSX
 ## Installation from binaries
 
-If you've downloaded binaries from [the Taiji homepage](https://taiji.com/downloads), then installing the base node is
+If you've downloaded binaries from [the Tari homepage](https://taiji.com/downloads), then installing the base node is
 relatively simple.
 
 1. Extract the contents of the zip archive to a convenient location (e.g. `/Users/your_name/taiji_node`). Since you're

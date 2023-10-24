@@ -1,6 +1,6 @@
 [package]
 name = "taiji_service_framework"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 authors = ["The Taiji Development Community"]
 description = "The Taiji communication stack service framework"
 repository = "https://github.com/onsight-tech-services/taiji"

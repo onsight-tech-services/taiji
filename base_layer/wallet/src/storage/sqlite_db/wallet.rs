@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -303,7 +303,7 @@ impl WalletSqliteDatabase {
 
     fn get_comms_features(&self, conn: &mut SqliteConnection) -> Result<Option<PeerFeatures>, WalletStorageError> {
         if let Some(key_str) = WalletSettingSql::get(&DbKey::CommsFeatures, conn)? {
-            let features = u64::from_str(&key_str).map_err(|e| WalletStorageError::ConversionError(e.to_string()))?;
+            let features = u32::from_str(&key_str).map_err(|e| WalletStorageError::ConversionError(e.to_string()))?;
             let peer_features = PeerFeatures::from_bits(features);
             Ok(peer_features)
         } else {

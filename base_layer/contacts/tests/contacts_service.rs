@@ -1,4 +1,4 @@
-// Copyright 2021. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -60,7 +60,7 @@ pub fn setup_contacts_service<T: ContactsBackend + 'static>(
     backend: T,
 ) -> (ContactsServiceHandle, Arc<NodeIdentity>, Shutdown) {
     let _enter = runtime.enter();
-    let (publisher, subscription_factory) = pubsub_connector(100, 50);
+    let (publisher, subscription_factory) = pubsub_connector(100);
     let node_identity = Arc::new(NodeIdentity::random(
         &mut OsRng,
         get_next_memory_address(),

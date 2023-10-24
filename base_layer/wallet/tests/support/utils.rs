@@ -1,4 +1,4 @@
-//  Copyright 2019 The Taiji Project
+//  Copyright 2023, OnSight Tech Services LLC
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -38,7 +38,7 @@ use taiji_core::{
     },
 };
 use taiji_key_manager::key_manager_service::KeyManagerInterface;
-use taiji_script::{inputs, script};
+use taiji_script::{inputs, script, TaijiScript};
 
 pub async fn make_input<R: Rng + CryptoRng>(
     _rng: &mut R,
@@ -47,7 +47,7 @@ pub async fn make_input<R: Rng + CryptoRng>(
     key_manager: &TestKeyManager,
 ) -> WalletOutput {
     let test_params = TestParams::new(key_manager).await;
-    create_wallet_output_with_data(script!(Nop), features.clone(), &test_params, val, key_manager)
+    create_wallet_output_with_data(TaijiScript::default(), features.clone(), &test_params, val, key_manager)
         .await
         .unwrap()
 }

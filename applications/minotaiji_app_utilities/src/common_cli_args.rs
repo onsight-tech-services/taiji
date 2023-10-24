@@ -47,7 +47,7 @@ pub struct CommonCliArgs {
     pub log_level: Option<Level>,
 
     /// Supply a network (overrides existing configuration)
-    #[clap(long, env = "TARI_NETWORK")]
+    #[clap(long, env = "TAIJI_NETWORK")]
     pub network: Option<Network>,
 
     /// Overrides for properties in the config file, e.g. -p base_node.network=esmeralda

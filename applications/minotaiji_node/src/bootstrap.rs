@@ -1,4 +1,4 @@
-//  Copyright 2020, The Taiji Project
+//  Copyright 2023, OnSight Tech Services LLC
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -85,7 +85,7 @@ where B: BlockchainBackend + 'static
         let peer_seeds = &self.app_config.peer_seeds;
 
         let buf_size = cmp::max(BASE_NODE_BUFFER_MIN_SIZE, base_node_config.buffer_size);
-        let (publisher, peer_message_subscriptions) = pubsub_connector(buf_size, base_node_config.buffer_rate_limit);
+        let (publisher, peer_message_subscriptions) = pubsub_connector(buf_size);
         let peer_message_subscriptions = Arc::new(peer_message_subscriptions);
         let mempool_config = base_node_config.mempool.service.clone();
 

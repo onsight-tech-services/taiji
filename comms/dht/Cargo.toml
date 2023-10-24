@@ -1,10 +1,10 @@
 [package]
 name = "taiji_comms_dht"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 authors = ["The Taiji Development Community"]
 description = "Taiji comms DHT module"
 repository = "https://github.com/onsight-tech-services/taiji"
-homepage = "https://taiji.com"
+homepage = "https://onsight.services"
 readme = "README.md"
 license = "BSD-3-Clause"
 edition = "2018"
@@ -20,7 +20,7 @@ taiji_storage = {  path = "../../infrastructure/storage" }
 taiji_common_sqlite = { path = "../../common_sqlite" }
 
 anyhow = "1.0.53"
-bitflags = "1.2.0"
+bitflags = "1"
 chacha20 = "0.7.1"
 chacha20poly1305 = "0.10.1"
 chrono = { version = "0.4.19", default-features = false }

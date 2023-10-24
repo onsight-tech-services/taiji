@@ -4,9 +4,9 @@ version = "0.12.0"
 edition = "2021"
 description = "Taiji script library"
 authors = ["The Taiji Development Community"]
-repository = "https://github.com/onsight-tech-services/taiji"
+repository = "https://github.com/tari-project/tari"
 categories = ["cryptography"]
-homepage = "https://taiji.com"
+homepage = "https://onsight.services"
 readme = "README.md"
 license = "BSD-3-Clause"
 

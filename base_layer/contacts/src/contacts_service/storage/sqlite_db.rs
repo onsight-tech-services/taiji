@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2019, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:

@@ -9,8 +9,8 @@ _Last Updated: April 24, 2023_
 
 This policy applies to:
 
-* Code implementation as seen in the `taiji-project` [GitHub repositories](https://github.com/taiji-project). This includes code in the `development` branches and any release branch.
-* Written research from Taiji Labs which dictates the above-referenced Taiji code implementation. This includes [Taiji RFCs](https://github.com/taiji-project/rfcs) and any published academic or journal articles.
+* Code implementation as seen in the `onsight-tech-services` [GitHub repositories](https://github.com/onsight-tech-services). This includes code in the `development` branches and any release branch.
+* Written research from Taiji Labs which dictates the above-referenced Taiji code implementation. This includes [Taiji RFCs](https://github.com/onsight-tech-services/rfcs) and any published academic or journal articles.
 * Infrastructure owned, operated, or maintained by Taiji Labs. This includes websites and public-facing applications.
 
 ### Out of Scope
@@ -31,12 +31,12 @@ Vulnerabilities discovered or suspected in systems not owned by Taiji Labs shoul
 
 ## Disclosure
 
-Please report any **non-sensitive issue unrelated to security** as a [GitHub issue here](https://github.com/taiji-project/taiji/issues/new?assignees=&labels=bug-report&template=bug_report.md&title=%5BThanks%20for%20making%20Taiji%20better%5D). Thank you for helping to make Taiji more robust and reliable.
+Please report any **non-sensitive issue unrelated to security** as a [GitHub issue here](https://github.com/onsight-tech-services/taiji/issues/new?assignees=&labels=bug-report&template=bug_report.md&title=%5BThanks%20for%20making%20Taiji%20better%5D). Thank you for helping to make Taiji more robust and reliable.
 
-* [Taiji Issues](https://github.com/taiji-project/taiji/issues)
-* [iOS Issues](https://github.com/taiji-project/wallet-ios/issues)
+* [Taiji Issues](https://github.com/onsight-tech-services/taiji/issues)
+* [iOS Issues](https://github.com/onsight-tech-services/wallet-ios/issues)
 * [RFC Docs](https://rfc.taiji.com/)
-* [Contributing Guidelines](https://github.com/taiji-project/taiji/blob/55481043b99ef0381289e9ac85973dc1b603ba81/Contributing.md)
+* [Contributing Guidelines](https://github.com/onsight-tech-services/taiji/blob/55481043b99ef0381289e9ac85973dc1b603ba81/Contributing.md)
 
 ### Security Issues
 
@@ -44,15 +44,7 @@ The following information applies to vulnerabilities, exploits, or undesirable b
 
 #### Official Channels
 
-Please report security issues to [professor@taiji.com](mailto:professor@taiji.com), providing all relevant information.
-
-```
-professor@taiji.com
-PGP fingerprint = 5410 7BD9 02F0 A865 3DDF F4CD 7A4A 432E C35C 9C7E
-
-If pasting GPG encrypted data, use paste.debian.net or paste.ubuntu.com
-as these do not introduce issues with Tor via Cloudflare.
-```
+Please report security issues to [info@onsight.services](mailto:info@onsight.services), providing all relevant information.
 
 **You must include:**
 
@@ -150,7 +142,7 @@ The following requirements must be adhered to in order to for any report to qual
 
 ### Commonplace Reports
 
-In addition to the areas defined as [Out of Scope](#out-of-scope) in this policy, the following commonplace reports do not qualify for a bounty reward. Such issues may be disclosed as a [GitHub issue here](https://github.com/taiji-project/taiji/issues/new?assignees=&labels=bug-report&template=bug_report.md&title=%5BThanks%20for%20making%20Taiji%20better%5D).
+In addition to the areas defined as [Out of Scope](#out-of-scope) in this policy, the following commonplace reports do not qualify for a bounty reward. Such issues may be disclosed as a [GitHub issue here](https://github.com/onsight-tech-services/taiji/issues/new?assignees=&labels=bug-report&template=bug_report.md&title=%5BThanks%20for%20making%20Taiji%20better%5D).
 
 * Lack of a security feature that is not critical to the system's operation
 * Configuration issues that are not relevant to the network or application

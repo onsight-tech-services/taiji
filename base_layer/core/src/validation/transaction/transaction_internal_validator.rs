@@ -24,7 +24,11 @@ use taiji_common_types::{chain_metadata::ChainMetadata, types::HashOutput};
 
 use crate::{
     consensus::ConsensusManager,
-    transactions::{taiji_amount::MicroMinotaiji, transaction_components::Transaction, CryptoFactories},
+    transactions::{
+        taiji_amount::MicroMinotaiji,
+        transaction_components::{OutputType::Coinbase, Transaction},
+        CryptoFactories,
+    },
     validation::{aggregate_body::AggregateBodyInternalConsistencyValidator, ValidationError},
 };
 
@@ -70,7 +74,7 @@ impl TransactionInternalConsistencyValidator {
         tip_metadata: ChainMetadata,
     ) -> Result<(), ValidationError> {
         if tx.body.outputs().iter().any(|o| o.features.is_coinbase()) {
-            return Err(ValidationError::ErroneousCoinbaseOutput);
+            return Err(ValidationError::OutputTypeNotPermitted { output_type: Coinbase });
         }
 
         // We can call this function with a constant value, because we've just shown that this is NOT a coinbase, and

@@ -81,7 +81,7 @@ use crate::{
     domain_message::DomainMessage,
     services::{
         liveness::state::LivenessState,
-        utils::{map_decode, ok_or_skip_result},
+        utils::map_decode,
     },
     taiji_message::TaijiMessageType,
 };
@@ -107,11 +107,10 @@ impl LivenessInitializer {
     }
 
     /// Get a stream of inbound PingPong messages
-    fn ping_stream(&self) -> impl Stream<Item = DomainMessage<PingPongMessage>> {
+    fn ping_stream(&self) -> impl Stream<Item = DomainMessage<Result<PingPongMessage, prost::DecodeError>>> {
         self.inbound_message_subscription_factory
             .get_subscription(TaijiMessageType::PingPong, "Liveness")
             .map(map_decode::<PingPongMessage>)
-            .filter_map(ok_or_skip_result)
     }
 }
 

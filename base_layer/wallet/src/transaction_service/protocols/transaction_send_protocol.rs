@@ -1,4 +1,4 @@
-// Copyright 2020. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -50,7 +50,7 @@ use taiji_core::{
     },
 };
 use taiji_p2p::taiji_message::TaijiMessageType;
-use taiji_script::script;
+use taiji_script::TaijiScript;
 use tokio::{
     sync::{mpsc::Receiver, oneshot},
     time::sleep,
@@ -224,7 +224,7 @@ where
                 self.fee_per_gram,
                 self.tx_meta.clone(),
                 self.message.clone(),
-                script!(Nop),
+                TaijiScript::default(),
                 Covenant::default(),
                 MicroMinotaiji::zero(),
             )

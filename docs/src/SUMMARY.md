@@ -1,5 +1,6 @@
 # Summary
 
+- [Diagrams](diagrams/index.md)
 - [Wallet to Wallet negotiation with TaijiScript](wallet_to_wallet_with_taijiscript.md)
 - [TaijiScript No-Op script vulnerability](taiji_script_no_op_vulnerability.md)
 - [Replay attacks](replay_attacks.md)

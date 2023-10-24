@@ -1057,7 +1057,7 @@ mod test {
             .with_lock_height(0)
             .with_fee_per_gram(MicroMinotaiji(2))
             .with_change_data(
-                script!(Nop),
+                TaijiScript::default(),
                 inputs!(change.script_key_pk),
                 change.script_key_id.clone(),
                 change.spend_key_id.clone(),

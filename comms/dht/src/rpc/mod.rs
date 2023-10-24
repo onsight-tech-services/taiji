@@ -37,7 +37,7 @@ use taiji_comms_rpc_macros::taiji_rpc;
 use crate::proto::rpc::{GetCloserPeersRequest, GetPeersRequest, GetPeersResponse};
 
 mod peer_info;
-pub use peer_info::{PeerInfo, PeerInfoAddress};
+pub use peer_info::UnvalidatedPeerInfo;
 
 #[taiji_rpc(protocol_name = b"t/dht/1", server_struct = DhtService, client_struct = DhtClient)]
 pub trait DhtRpcService: Send + Sync + 'static {

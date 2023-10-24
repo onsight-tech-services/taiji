@@ -1,4 +1,4 @@
-// Copyright 2019. The Taiji Project
+// Copyright 2023, OnSight Tech Services LLC
 //
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 // following conditions are met:
@@ -101,6 +101,7 @@ pub enum TransactionServiceRequest {
         amount: MicroMinotaiji,
         validator_node_public_key: CommsPublicKey,
         validator_node_signature: Signature,
+        validator_node_claim_public_key: CommsPublicKey,
         selection_criteria: UtxoSelectionCriteria,
         fee_per_gram: MicroMinotaiji,
         message: String,
@@ -497,6 +498,7 @@ impl TransactionServiceHandle {
         amount: MicroMinotaiji,
         validator_node_public_key: PublicKey,
         validator_node_signature: Signature,
+        validator_node_claim_public_key: PublicKey,
         selection_criteria: UtxoSelectionCriteria,
         fee_per_gram: MicroMinotaiji,
         message: String,
@@ -507,6 +509,7 @@ impl TransactionServiceHandle {
                 amount,
                 validator_node_public_key,
                 validator_node_signature,
+                validator_node_claim_public_key,
                 selection_criteria,
                 fee_per_gram,
                 message,

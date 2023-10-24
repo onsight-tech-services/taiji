@@ -3,7 +3,7 @@ name = "taiji_common_types"
 authors = ["The Taiji Development Community"]
 description = "Taiji cryptocurrency common types"
 license = "BSD-3-Clause"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 edition = "2018"
 
 [dependencies]

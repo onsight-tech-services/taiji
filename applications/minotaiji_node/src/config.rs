@@ -1,4 +1,4 @@
-//  Copyright 2022. The Taiji Project
+//  Copyright 2023, OnSight Tech Services LLC
 //
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 //  following conditions are met:
@@ -122,9 +122,6 @@ pub struct BaseNodeConfig {
     pub status_line_interval: Duration,
     /// The buffer size for the publish/subscribe connector channel, connecting comms messages to the domain layer
     pub buffer_size: usize,
-    /// The rate limit for the publish/subscribe connector channel, i.e. maximum amount of inbound messages to
-    /// accept - any rate attempting to exceed this limit will be throttled
-    pub buffer_rate_limit: usize,
     /// Liveness meta data auto ping interval between peers
     #[serde(with = "serializers::seconds")]
     pub metadata_auto_ping_interval: Duration,
@@ -162,7 +159,6 @@ impl Default for BaseNodeConfig {
             mempool: Default::default(),
             status_line_interval: Duration::from_secs(5),
             buffer_size: 1_500,
-            buffer_rate_limit: 1_000,
             metadata_auto_ping_interval: Duration::from_secs(30),
             state_machine: Default::default(),
             report_grpc_error: false,

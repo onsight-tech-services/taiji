@@ -4,7 +4,7 @@ authors = ["The Taiji Development Community"]
 description = "The Taiji merge mining proxy for xmrig"
 repository = "https://github.com/onsight-tech-services/taiji"
 license = "BSD-3-Clause"
-version = "0.52.0-pre.0"
+version = "0.52.0-dan.1"
 edition = "2018"
 
 [features]

@@ -255,7 +255,7 @@ mod test {
         let m = TransactionMetadata::new(MicroMinotaiji(100), 0);
         let test_params = TestParams::new(&key_manager).await;
         let test_params2 = TestParams::new(&key_manager).await;
-        let script = TaijiScript::default();
+        let script = script!(Nop);
         let sender_offset_public_key = key_manager
             .get_public_key_at_key_id(&test_params.sender_offset_key_id)
             .await

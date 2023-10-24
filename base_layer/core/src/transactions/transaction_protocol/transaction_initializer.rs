@@ -696,7 +696,7 @@ mod test {
         );
 
         let output = create_wallet_output_with_data(
-            TaijiScript::default(),
+            script!(Nop),
             OutputFeatures::default(),
             &p,
             MicroMinotaiji(5000) - expected_fee,
@@ -791,7 +791,7 @@ mod test {
         let p = TestParams::new(&key_manager).await;
 
         let output = create_wallet_output_with_data(
-            TaijiScript::default(),
+            script!(Nop),
             OutputFeatures::default(),
             &p,
             MicroMinotaiji(500),

@@ -195,7 +195,7 @@ async fn inbound_fetch_utxos() {
         MicroMinotaiji(10_000),
         &key_manager,
         &Default::default(),
-        &TaijiScript::default(),
+        &script!(Nop),
         &Covenant::default(),
         MicroMinotaiji::zero(),
     )

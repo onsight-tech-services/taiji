@@ -25,4 +25,4 @@ let mut client = Client::new(
 client.initialize().await;
 ```
 
-This crate is part of the [Taiji Cryptocurrency](https://taiji.com) project.
+This crate is part of the [Taiji Cryptocurrency](https://onsight.services) project.

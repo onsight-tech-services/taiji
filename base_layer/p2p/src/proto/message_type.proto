@@ -28,8 +28,6 @@ enum TaijiMessageType {
     TaijiMessageTypeTransactionFinalized = 73;
     TaijiMessageTypeTransactionCancelled = 74;
 
-    // -- DAN Messages --
-    TaijiMessageTypeDanConsensusMessage = 101;
     // -- Extended --
 
     TaijiMessageTypeText = 225;
