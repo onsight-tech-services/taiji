@@ -28,8 +28,8 @@ use taiji_comms::{
     peer_manager::{IdentitySignature, PeerFeatures},
     NodeIdentity,
 };
-use tari_comms_dht::{envelope::DhtMessageType, outbound::SendMessageParams};
-use tari_test_utils::async_assert_eventually;
+use taiji_comms_dht::{envelope::DhtMessageType, outbound::SendMessageParams};
+use taiji_test_utils::async_assert_eventually;
 use tari_utilities::ByteArray;
 
 #[tokio::test(flavor = "multi_thread")]

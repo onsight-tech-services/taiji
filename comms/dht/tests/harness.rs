@@ -37,13 +37,13 @@ use taiji_comms::{
     CommsBuilder,
     CommsNode,
 };
-use tari_comms_dht::{inbound::DecryptedDhtMessage, DbConnectionUrl, Dht, DhtConfig};
-use tari_shutdown::{Shutdown, ShutdownSignal};
-use tari_storage::{
+use taiji_comms_dht::{inbound::DecryptedDhtMessage, DbConnectionUrl, Dht, DhtConfig};
+use taiji_shutdown::{Shutdown, ShutdownSignal};
+use taiji_storage::{
     lmdb_store::{LMDBBuilder, LMDBConfig},
     LMDBWrapper,
 };
-use tari_test_utils::{paths::create_temporary_data_path, random};
+use taiji_test_utils::{paths::create_temporary_data_path, random};
 use tokio::{
     sync::{broadcast, mpsc},
     time,
